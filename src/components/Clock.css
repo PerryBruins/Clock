@@ -1,0 +1,22 @@
+.clock {
+    display: flex;
+    gap: 8px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.digits {
+    display: inline-flex;
+    gap: 8px;
+}
+
+.digit-set {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

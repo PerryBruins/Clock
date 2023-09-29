@@ -1,0 +1,11 @@
+.digit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50px;
+    height: 200px;
+    border-radius: 4px;
+    background-color: #ED6B6A;
+    box-shadow: 5px 5px 5px lightgray;
+}

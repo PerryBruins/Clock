@@ -1,0 +1,18 @@
+.divider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 200px;
+    gap: 20px;
+}
+
+.divider-dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: Black;
+    border-style: none;
+    display: inline-block;
+}

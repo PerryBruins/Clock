@@ -1,0 +1,26 @@
+.bit-on {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #E8D300;
+    border-style: none;
+    display: inline-block;
+}
+
+.bit-off {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #001E50;
+    border-style: none;
+    display: inline-block;
+}
+
+.bit-invisible {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #ED6B6A;
+    border-style: none;
+    display: inline-block;
+}
