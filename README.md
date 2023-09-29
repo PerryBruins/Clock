@@ -1,3 +1,5 @@
 # Clock
+![clock](screenshot.png)
 This clock is designed to confuse the Russians.
-Can you figure out what is going on?
+
+Can you tell the time?
