@@ -39,7 +39,7 @@ export default function Clock({date}) {
 
             <div className='digit-set'>
                 <div className='digits'>
-                    <Digit number={min1} maxNumber={2} />
+                    <Digit number={min1} maxNumber={5} />
                     <Digit number={min2} maxNumber={9} />
                 </div>
                 <h2>{pad(time.getMinutes(), 2)}</h2>
@@ -49,7 +49,7 @@ export default function Clock({date}) {
             
             <div className='digit-set'>
                 <div className='digits'>
-                    <Digit number={sec1} maxNumber={2} />
+                    <Digit number={sec1} maxNumber={5} />
                     <Digit number={sec2} maxNumber={9} />
                 </div>
                 <h2>{pad(time.getSeconds(), 2)}</h2>
