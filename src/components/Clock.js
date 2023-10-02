@@ -3,6 +3,16 @@ import './Clock.css';
 import Digit from './Digit';
 import Divider from './Divider';
 
+const decimalDigitsVisibleStyle = {
+    opacity: '1',
+    transition: '1s, opacity 1s'
+};
+
+const decimalDigitsInvisibleStyle = {
+    opacity: '0',
+    transition: '1s, opacity 1s'
+}
+
 export default function Clock({date}) {
     const [time, setTime] = useState(new Date());
     const [showTime, setShowTime] = useState(false);
@@ -35,7 +45,9 @@ export default function Clock({date}) {
                     <Digit number={hrs1} maxNumber={2} />
                     <Digit number={hrs2} maxNumber={9} />
                 </div>
-                <h2 className={showTime ? 'decimal-digits-visible' : 'decimal-digits'}>{pad(time.getHours(), 2)}</h2>
+                <div className='decimal-digits-box' style={showTime ? decimalDigitsVisibleStyle : decimalDigitsInvisibleStyle}>
+                    <h2>{pad(time.getHours(), 2)}</h2>
+                </div>
             </div>
 
             <Divider />
@@ -45,7 +57,9 @@ export default function Clock({date}) {
                     <Digit number={min1} maxNumber={5} />
                     <Digit number={min2} maxNumber={9} />
                 </div>
-                <h2 className={showTime ? 'decimal-digits-visible' : 'decimal-digits'}>{pad(time.getMinutes(), 2)}</h2>
+                <div className='decimal-digits-box' style={showTime ? decimalDigitsVisibleStyle : decimalDigitsInvisibleStyle}>
+                    <h2>{pad(time.getMinutes(), 2)}</h2>
+                </div>
             </div>
             
             <Divider />
@@ -55,7 +69,9 @@ export default function Clock({date}) {
                     <Digit number={sec1} maxNumber={5} />
                     <Digit number={sec2} maxNumber={9} />
                 </div>
-                <h2 className={showTime ? 'decimal-digits-visible' : 'decimal-digits'}>{pad(time.getSeconds(), 2)}</h2>
+                <div className='decimal-digits-box' style={showTime ? decimalDigitsVisibleStyle : decimalDigitsInvisibleStyle}>
+                    <h2>{pad(time.getSeconds(), 2)}</h2>
+                </div>
             </div>
         </div>
     );

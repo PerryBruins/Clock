@@ -9,18 +9,24 @@
     transform: translate(-50%, -50%);
 }
 
+h2 {
+    margin: 8px;
+    color: #001E50;
+}
+
+.decimal-digits-box {
+    background-color: #ED6B6A;
+    box-shadow: 5px 5px 5px lightgray;
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .digits {
     display: inline-flex;
     gap: 8px;
-}
-
-.decimal-digits {
-    transition: 'opacity linear 2s';
-    opacity: 0;
-}
-
-.decimal-digits-visible {
-    opacity: 1;
 }
 
 .digit-set {
@@ -28,4 +34,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 8px;
 }
