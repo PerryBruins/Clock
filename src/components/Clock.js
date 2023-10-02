@@ -5,12 +5,12 @@ import Divider from './Divider';
 
 const decimalDigitsVisibleStyle = {
     opacity: '1',
-    transition: '1s, opacity 1s'
+    transition: '1s, all 1s'
 };
 
 const decimalDigitsInvisibleStyle = {
     opacity: '0',
-    transition: '1s, opacity 1s'
+    transition: '1s, all 1s'
 }
 
 export default function Clock({date}) {
