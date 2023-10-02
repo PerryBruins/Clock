@@ -14,6 +14,15 @@
     gap: 8px;
 }
 
+.decimal-digits {
+    transition: 'opacity linear 2s';
+    opacity: 0;
+}
+
+.decimal-digits-visible {
+    opacity: 1;
+}
+
 .digit-set {
     display: flex;
     flex-direction: column;

@@ -5,9 +5,10 @@ import Divider from './Divider';
 
 export default function Clock({date}) {
     const [time, setTime] = useState(new Date());
+    const [showTime, setShowTime] = useState(false);
 
     function pad(num, size) {
-        num = num.toString(8);
+        num = num.toString(10);
         while (num.length < size) num = "0" + num;
         return num;
     }
@@ -26,13 +27,15 @@ export default function Clock({date}) {
     var sec2 = time.getSeconds() % 10;
 
     return (
-        <div className='clock'>
+        <div className='clock' 
+             onMouseEnter={() => setShowTime(true)}
+             onMouseLeave={() => setShowTime(false)}>
             <div className='digit-set'>
                 <div className='digits'>
                     <Digit number={hrs1} maxNumber={2} />
                     <Digit number={hrs2} maxNumber={9} />
                 </div>
-                <h2>{pad(time.getHours(), 2)}</h2>
+                <h2 className={showTime ? 'decimal-digits-visible' : 'decimal-digits'}>{pad(time.getHours(), 2)}</h2>
             </div>
 
             <Divider />
@@ -42,7 +45,7 @@ export default function Clock({date}) {
                     <Digit number={min1} maxNumber={5} />
                     <Digit number={min2} maxNumber={9} />
                 </div>
-                <h2>{pad(time.getMinutes(), 2)}</h2>
+                <h2 className={showTime ? 'decimal-digits-visible' : 'decimal-digits'}>{pad(time.getMinutes(), 2)}</h2>
             </div>
             
             <Divider />
@@ -52,7 +55,7 @@ export default function Clock({date}) {
                     <Digit number={sec1} maxNumber={5} />
                     <Digit number={sec2} maxNumber={9} />
                 </div>
-                <h2>{pad(time.getSeconds(), 2)}</h2>
+                <h2 className={showTime ? 'decimal-digits-visible' : 'decimal-digits'}>{pad(time.getSeconds(), 2)}</h2>
             </div>
         </div>
     );
