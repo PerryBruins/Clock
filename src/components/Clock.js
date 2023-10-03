@@ -16,6 +16,7 @@ const decimalDigitsInvisibleStyle = {
 export default function Clock({date}) {
     const [time, setTime] = useState(new Date());
     const [showTime, setShowTime] = useState(false);
+    const [lightDivider, setLightDivider] = useState(false);
 
     function pad(num, size) {
         num = num.toString(10);
@@ -24,10 +25,13 @@ export default function Clock({date}) {
     }
 
     useEffect(() => {
-        const interval = setInterval(() => { setTime(new Date()); }, 1000);
+        const interval = setInterval(() => { 
+            setTime(new Date()); 
+            setLightDivider(!lightDivider);
+        }, 1000);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [setTime, lightDivider]);
 
     var hrs1 = time.getHours() / 10;
     var hrs2 = time.getHours() % 10;
@@ -50,7 +54,7 @@ export default function Clock({date}) {
                 </div>
             </div>
 
-            <Divider />
+            <Divider lightDivider={lightDivider} />
 
             <div className='digit-set'>
                 <div className='digits'>
@@ -62,7 +66,7 @@ export default function Clock({date}) {
                 </div>
             </div>
             
-            <Divider />
+            <Divider  lightDivider={lightDivider} />
             
             <div className='digit-set'>
                 <div className='digits'>

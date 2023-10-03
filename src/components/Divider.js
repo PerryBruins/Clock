@@ -1,10 +1,10 @@
 import './Divider.css';
 
-export default function Divider() {
+export default function Divider({lightDivider}) {
     return (
         <div className='divider'>
-            <span className='divider-dot' />
-            <span className='divider-dot' />
+            <span className={lightDivider ? 'divider-dot' : 'divider-dot-light'} />
+            <span className={lightDivider ? 'divider-dot' : 'divider-dot-light'} />
         </div>
     );
 }
