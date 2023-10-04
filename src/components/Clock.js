@@ -41,6 +41,7 @@ export default function Clock({date}) {
     var sec2 = time.getSeconds() % 10;
 
     return (
+        <>
         <div className='clock' 
              onMouseEnter={() => setShowTime(true)}
              onMouseLeave={() => setShowTime(false)}>
@@ -78,5 +79,10 @@ export default function Clock({date}) {
                 </div>
             </div>
         </div>
+        <div className='url-display'>
+            <a href='https://github.com/PerryBruins/Clock'><h4>Source Code</h4></a>
+            <a href='https://securityheaders.com/?q=perrybruins.nl&hide=on&followRedirects=on'><h4>Security Headers</h4></a>
+        </div>
+        </>
     );
   }
