@@ -15,6 +15,7 @@
     background-color: #001E50;
     border-style: none;
     display: inline-block;
+    box-shadow: 5px 5px 5px lightgray;
 }
 
 .divider-dot-light {
@@ -26,4 +27,5 @@
     border-color: #001E50;
     background-color: #E8D300;
     display: inline-block;
+    box-shadow: 5px 5px 5px lightgray;
 }
